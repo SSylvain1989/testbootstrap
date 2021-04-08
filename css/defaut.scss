@@ -1,0 +1,53 @@
+// option A : inclure tout bootstrap
+
+// on modifie les variables du themes avant l'import 
+
+// couleurs
+$theme-colors: ('primary' : #f1c40f,
+    'test' : #f1c,
+);
+
+// on modifie les marges / padding
+
+// il faut déclarer d'abord à quoi est = la variable de base , ici c'est la valeur officielle de bootstrap
+$spacers: 1rem;
+
+// on est pas obligé d'écrire les puissances déjà existantes ( ici mise en commentaire ) 
+$spacers : ( // 0: 0,
+    // 1 : ($spacers * .25),
+    // 2: ($spacers * .5),
+    // 3: $spacers,
+    // 4: ($spacers * 1.5),
+    // 5: ($spacers * 3),
+    6: ($spacers * 6),
+    7 : ($spacers * 8),
+    8 : ($spacers * 10),
+    9 : ($spacers * 15),
+);
+
+// ici on peut renommer les breakpoints ou en rajouter par contre on DOIT ici réécrire les BP existants
+$grid-breakpoints: (xs : 0,
+    sm : 576px,
+    md : 768px,
+    lg : 992px,
+    xl : 1200px,
+    xxl : 1400px,
+    xxxl : 1600px, // ici c'est celui qu'on rajoute 
+);
+
+
+// les variables qu'on peut modifier sont ici : scss/_variables.scss
+
+$test : #f1c;
+
+$link-color: $test;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss"
+
+// cmd pour modifier le theme de bootstrap ❯ sass --watch css/defaut.scss css/defaut.css
+
+// cmd pour compresser le css de bootstrap ❯ sass --watch css/defaut.scss css/defaut.css -s compressed
+
+// option A : inclure tout bootstrap
+
+// @import "../node_modules/bootstrap/scss/bootstrap-reboot.scss"
